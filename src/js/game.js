@@ -5,8 +5,19 @@
 
   Game.prototype = {
     create: function () {
-      this.add.sprite(0,0,'button');
-      this.input.onDown.add(this.onInputDown, this);
+      var sprite = this.add.sprite(0,0,'button');
+
+
+      this.input.onDown.add(function(){
+        sprite.animations.add('pressed',[0,1]);
+        sprite.animations.play('pressed');
+      }, this);
+
+      this.input.onUp.add(function(){
+        sprite.animations.add('unpressed',[1,0]);
+        sprite.animations.play('unpressed');
+      }, this);
+
     },
 
     update: function () {

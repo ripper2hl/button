@@ -19,7 +19,7 @@
 
     loadResources: function () {
       // load your assets here
-      this.load.image('button', 'assets/button.svg');
+      this.load.spritesheet('button', 'assets/button.png',250,248);
     },
 
     create: function () {
