@@ -20,6 +20,7 @@
     loadResources: function () {
       // load your assets here
       this.load.spritesheet('button', 'assets/button.png',250,248);
+      this.load.audio('button', ['assets/button.ogg','assets/button.mp3']);      
     },
 
     create: function () {

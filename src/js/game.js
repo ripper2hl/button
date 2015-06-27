@@ -11,6 +11,7 @@
       this.input.onDown.add(function(){
         sprite.animations.add('pressed',[0,1]);
         sprite.animations.play('pressed');
+        this.sound.play('button');
       }, this);
 
       this.input.onUp.add(function(){
